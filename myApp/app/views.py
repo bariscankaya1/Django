@@ -43,6 +43,3 @@ def createAPI(request):
             'request':request.method
         })
     return HttpResponse(userResult.jsonResult, content_type="application/json")
-
-def readJsonFile(request):
-    jsonResult=open('user.json','r').read()
