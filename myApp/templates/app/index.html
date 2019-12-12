@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body%}
+
+    <div class="col-md-8" style="padding:0px;">
+        <form method="POST" class>
+            <div class="form-row" style="width:50%;margin:30% 25%;">
+                <div class="col-md-12">
+                    <div class="position-relative form-group">
+                        <label for="height">
+                            <span class="text-danger">*</span>
+                            Boy
+                        </label>
+                        {{ form.height }}
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="position-relative form-group">
+                        <label for="weight">
+                            <span class="text-danger">*</span>
+                            Kilo
+                        </label>
+                        {{ form.weight }}
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="position-relative form-group">
+                        <label for="shoeSize">
+                            <span class="text-danger">*</span>
+                            Ayakkabı Numarası
+                        </label>
+                        {{ form.shoeSize }}
+                    </div>
+                </div>
+                <div class="ml-auto">
+                    <input type="submit" class="btn-wide btn-pill btn-shadow btn-hover-shine btn btn-primary btn-lg" value="Kayıt Ol">
+                </div>
+
+
+
+            </div>
+
+        </form>
+    </div>
+    <div class="d-md-flex d-xs-none col-md-4" style="padding:0px;background:url({% static 'images/night.png'%});background-repeat:no-repeat;background-size:contain;" >
+    <div class="col-md-12" style="background:rgba(61,61,61,0.4);height:auto">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="display-2 text-center" style="color:white;margin:50% 0% 0% 0%">Cinsiyetiniz</h1>
+                <h1 class="display-4 text-center" style="color:White;">
+                    {% if messages %}
+                        {% for message in messages %}
+                            {{message}}
+                            <br>
+                        {% endfor %}
+                    {% endif %}
+                </h1>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
